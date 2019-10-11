@@ -28,3 +28,12 @@ if('IntersectionObserver' in window) {
         imageObserver.observe(image)
     })
 }
+
+window.addEventListener('load', function() {
+    this.setTimeout(firstLazy, 1000);
+});
+// with out Observing
+function firstLazy() {
+    const photo = document.getElementById('first');
+    photo.className = 'is-loaded';
+}
